@@ -85,6 +85,17 @@ Public MustInherit Class MythBackendBase
             Return MythTvVersion.v28
         End If
 
+        html = WC.DownloadString(Common.GetServiceUrl & "/Myth/GetBackendInfo")
+        If html.Contains("<Version>v0.28") Then
+            Return MythTvVersion.v28
+        End If
+        If html.Contains("<Version>v29") Then
+            Return MythTvVersion.v29
+        End If
+        If html.Contains("<Version>v30") Then
+            Return MythTvVersion.v30
+        End If
+
         Return MythTvVersion.v26
     End Function
 

@@ -14,7 +14,7 @@ Public Class fecontrol : Implements IHttpHandler
             Dim Params As String = HttpUtility.UrlDecode(context.Request.QueryString("p"))
         
             Dim Wc As New Net.WebClient
-            Dim ret As String = Wc.DownloadString("http://" & FE & ":6547/Frontend/" & Command & "?" & Params)
+            Dim ret As String = Wc.UploadString("http://" & FE & ":6547/Frontend/" & Command & "?" & Params)
         
             If Command = "GetStatus" Then
                 ret = ParseStatus(ret)

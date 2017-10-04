@@ -35,7 +35,7 @@ Partial Class tablet_remotelaunch
                     End If
 
                     'Start Playback
-                    Dim ret As String = WC.DownloadString("http://" & FE.Address & ":6547/Frontend/PlayRecording?ChanId=" & Request.QueryString("ChanId") & "&StartTime=" & Request.QueryString("StartTime"))
+                    Dim ret As String = WC.UploadString("http://" & FE.Address & ":6547/Frontend/PlayRecording?ChanId=" & Request.QueryString("ChanId") & "&StartTime=" & Request.QueryString("StartTime"))
 
                     Response.Redirect("frontend.aspx?fe=" & FE.Address, False)
 

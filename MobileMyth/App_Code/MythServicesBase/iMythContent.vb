@@ -52,6 +52,7 @@ Public Interface iMythContent
         Public Property SourceWidth As Integer
         Public Property SourceHeight As Integer
         Public Property AudioOnlyBitrate As Integer
+        Public Property RecordId As Integer
     End Class
 
 End Interface
